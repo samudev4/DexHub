@@ -137,3 +137,12 @@ lib/
  ├─ widgets/            # widgets reutilizables
  └─ main.dart           # main
 ```
+
+---
+
+## 🗺️ Roadmap
+
+-  Búsqueda avanzada (por tipo, generación, etc.).
+- Filtros y ordenación.
+- Perfil de usuario mejorado.
+- Animaciones / mejoras UI
