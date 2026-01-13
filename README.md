@@ -4,10 +4,9 @@
 ![Dart](https://img.shields.io/badge/Dart-Language-0175C2)
 ![Firebase](https://img.shields.io/badge/Firebase-Backend-orange)
 ![Open Source](https://img.shields.io/badge/Open%20Source-GitHub-black)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 Una **Pokédex hecha en Flutter** que consume datos de **PokeAPI**, permite **registro/login con Firebase**, y guarda tus **Pokémon favoritos** en la nube.  
-Incluye **modo oscuro 🌙** y es un proyecto **Open Source**.
+Incluye **modo oscuro** y es un proyecto **Open Source**.
 
 ---
 
@@ -34,11 +33,9 @@ Incluye **modo oscuro 🌙** y es un proyecto **Open Source**.
 
 ## 📸 Capturas
 
-> Añade tus screenshots cuando quieras (recomendado crear la carpeta `assets/screenshots/`)
-
 | Home | Detalle | Favoritos |
 |------|---------|-----------|
-| ![Home](assets/screenshots/home.png) | ![Detalle](assets/screenshots/detail.png) | ![Favoritos](assets/screenshots/favorites.png) |
+| ![Home](screenshots/home.png) | ![Home (Modo oscuro)](screenshots/home_dark.png) | ![Detalles](screenshots/details.png) | ![Detalles (Modo oscuro)](screenshots/details_dark.png) | ![Detalles 2](screenshots/details2.png) | ![Detalles 2 (Modo oscuro)](screenshots/details2_dark.png) | ![Detalles 3](screenshots/details3.png) | ![Detalles 3 (Modo oscuro)](screenshots/details3_dark.png) | ![Regiones](screenshots/regions.png) | ![Regiones (Modo oscuro)](screenshots/regions_dark.png) | ![Favoritos](screenshots/favorites.png) | ![Favoritos (Modo oscuro)](screenshots/favorites_dark.png) | ![Cuenta](screenshots/account.png) | ![Cuenta (Modo oscuro)](screenshots/account_dark.png) | ![Cuenta 2](screenshots/account2.png) | ![Cuenta 2 (Modo oscuro)](screenshots/account2_dark.png) |
 
 ---
 
@@ -46,7 +43,7 @@ Incluye **modo oscuro 🌙** y es un proyecto **Open Source**.
 
 ### 1) Clonar el repositorio
 ```bash
-git clone https://github.com/[TU_USUARIO]/[NOMBRE_REPO].git
-cd [NOMBRE_REPO]
+git clone https://github.com/samudev4/DexHub.git
+cd DexHub
 flutter pub get
 flutter run
