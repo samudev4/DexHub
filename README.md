@@ -15,7 +15,7 @@ Una **Pokédex hecha en Flutter** que consume datos de **PokeAPI**, permite **re
 Incluye **modo oscuro** y es un proyecto **Open Source**.
 
 <p align="center" style="font-size: 22px;">
-  <a href="https://play.google.com/store/apps/details?id=TU.PACKAGE.NAME">
+  <a href="https://play.google.com/store/apps/details?id=com.samudev.dexhub">
     <img src="https://raw.githubusercontent.com/IDTdesign/store-buttons/refs/heads/master/src/btn-gplay-es.svg" alt="Google Play" style="height: 5em; vertical-align:middle;">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
