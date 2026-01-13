@@ -102,6 +102,7 @@ flutter run
 
 > - android/app/google-services.json
 > - ios/Runner/GoogleService-Info.plist
+> - lib/firebase_options.dart
 
 ### Opción recomendada: FlutterFire CLI
 
@@ -117,4 +118,22 @@ firebase login
 ### 3) Configurar
 ```bash
 flutterfire configure
+```
+
+---
+
+## 📁 Estructura del proyecto
+
+```bash
+lib/
+ ├─ constants/          # constantes, strings y colores
+ ├─ controllers/        # controladores de auth y favoritos
+ ├─ models/             # modelos de pokemon, regiones y usuarios
+ ├─ pages/              # pantallas
+ ├─ routes/             # rutas de la aplicación
+ ├─ services/           # llamadas a PokeAPI y Firebase
+ ├─ theme/              # provider para tema claro/oscuro
+ ├─ utils/              # funciones de utilidad
+ ├─ widgets/            # widgets reutilizables
+ └─ main.dart           # main
 ```
