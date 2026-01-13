@@ -9,7 +9,6 @@
 ![GitHub forks](https://img.shields.io/github/forks/samudev4/DexHub?style=social)
 ![Last Commit](https://img.shields.io/github/last-commit/samudev4/DexHub)
 ![Issues](https://img.shields.io/github/issues/samudev4/DexHub)
-![License](https://img.shields.io/github/license/samudev4/DexHub)
 
 Una **Pokédex hecha en Flutter** que consume datos de **PokeAPI**, permite **registro/login con Firebase**, y guarda tus **Pokémon favoritos** en la nube.  
 Incluye **modo oscuro** y es un proyecto **Open Source**.
@@ -102,6 +101,7 @@ flutter run
 ### ⚠️ Este repo NO incluye los archivos de configuración de Firebase por seguridad:
 
 >android/app/google-services.json
+\n
 > ios/Runner/GoogleService-Info.plist
 
 ### Opción recomendada: FlutterFire CLI
