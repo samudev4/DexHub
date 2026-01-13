@@ -14,6 +14,16 @@
 Una **Pokédex hecha en Flutter** que consume datos de **PokeAPI**, permite **registro/login con Firebase**, y guarda tus **Pokémon favoritos** en la nube.  
 Incluye **modo oscuro** y es un proyecto **Open Source**.
 
+<p align="center">
+  <a href="https://play.google.com/store/apps/details?id=TU.PACKAGE.NAME">
+    <img alt="Get it on Google Play" src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" height="80"/>
+  </a>
+  <a href="https://apps.apple.com/app/idTU_APP_ID">
+    <img alt="Download on the App Store" src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="55"/>
+  </a>
+</p>
+
+
 ---
 
 ## 📌 Contenido
