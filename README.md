@@ -66,14 +66,14 @@ Incluye **modo oscuro** y es un proyecto **Open Source**.
 
 | Pantalla | Claro | Modo oscuro |
 |---------|-------|-------------|
-| Home | ![Home](screenshots/home.png) | ![Home (Modo oscuro)](screenshots/home_dark.png) |
-| Detalles | ![Detalles](screenshots/details.png) | ![Detalles (Modo oscuro)](screenshots/details_dark.png) |
-| Detalles 2 | ![Detalles 2](screenshots/details2.png) | ![Detalles 2 (Modo oscuro)](screenshots/details2_dark.png) |
-| Detalles 3 | ![Detalles 3](screenshots/details3.png) | ![Detalles 3 (Modo oscuro)](screenshots/details3_dark.png) |
-| Regiones | ![Regiones](screenshots/regions.png) | ![Regiones (Modo oscuro)](screenshots/regions_dark.png) |
-| Favoritos | ![Favoritos](screenshots/favorites.png) | ![Favoritos (Modo oscuro)](screenshots/favorites_dark.png) |
-| Cuenta | ![Cuenta](screenshots/account.png) | ![Cuenta (Modo oscuro)](screenshots/account_dark.png) |
-| Cuenta 2 | ![Cuenta 2](screenshots/account2.png) | ![Cuenta 2 (Modo oscuro)](screenshots/account2_dark.png) |
+| Home | ![Home](screenshots/mobile/home.png) | ![Home (Modo oscuro)](screenshots/mobile/home_dark.png) |
+| Detalles | ![Detalles](screenshots/mobile/details.png) | ![Detalles (Modo oscuro)](screenshots/mobile/details_dark.png) |
+| Detalles 2 | ![Detalles 2](screenshots/mobile/details2.png) | ![Detalles 2 (Modo oscuro)](screenshots/mobile/details2_dark.png) |
+| Detalles 3 | ![Detalles 3](screenshots/mobile/details3.png) | ![Detalles 3 (Modo oscuro)](screenshots/mobile/details3_dark.png) |
+| Regiones | ![Regiones](screenshots/mobile/regions.png) | ![Regiones (Modo oscuro)](screenshots/mobile/regions_dark.png) |
+| Favoritos | ![Favoritos](screenshots/mobile/favorites.png) | ![Favoritos (Modo oscuro)](screenshots/mobile/favorites_dark.png) |
+| Cuenta | ![Cuenta](screenshots/mobile/account.png) | ![Cuenta (Modo oscuro)](screenshots/mobile/account_dark.png) |
+| Cuenta 2 | ![Cuenta 2](screenshots/mobile/account2.png) | ![Cuenta 2 (Modo oscuro)](screenshots/mobile/account2_dark.png) |
 
 ---
 
