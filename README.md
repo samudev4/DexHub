@@ -100,9 +100,8 @@ flutter run
 
 ### ⚠️ Este repo NO incluye los archivos de configuración de Firebase por seguridad:
 
->android/app/google-services.json
-\n
-> ios/Runner/GoogleService-Info.plist
+> - android/app/google-services.json
+> - ios/Runner/GoogleService-Info.plist
 
 ### Opción recomendada: FlutterFire CLI
 
