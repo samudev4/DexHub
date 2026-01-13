@@ -16,11 +16,11 @@ Incluye **modo oscuro** y es un proyecto **Open Source**.
 
 <p align="center">
   <a href="https://play.google.com/store/apps/details?id=TU.PACKAGE.NAME">
-    <img src="https://raw.githubusercontent.com/IDTdesign/store-buttons/refs/heads/master/src/btn-gplay-es.svg" alt="Google Play" height="120">
+    <img src="https://raw.githubusercontent.com/IDTdesign/store-buttons/refs/heads/master/src/btn-gplay-es.svg" alt="Google Play" height="120" style="vertical-align:middle;">
   </a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://apps.apple.com/app/idTU_APP_ID">
-    <img src="https://raw.githubusercontent.com/IDTdesign/store-buttons/refs/heads/master/src/btn-appstore-es.svg" alt="App Store" height="120">
+    <img src="https://raw.githubusercontent.com/IDTdesign/store-buttons/refs/heads/master/src/btn-appstore-es.svg" alt="App Store" height="120" style="vertical-align:middle;">
   </a>
 </p>
 
