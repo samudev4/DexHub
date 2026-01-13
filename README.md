@@ -24,7 +24,7 @@ Incluye **modo oscuro** y es un proyecto **Open Source**.
   <a href="https://apps.apple.com/app/idTU_APP_ID">
     <img alt="Download on the App Store"
          src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
-         width="240"/>
+         width="200"/>
   </a>
 </p>
 
