@@ -146,3 +146,44 @@ lib/
 - Filtros y ordenación.
 - Perfil de usuario mejorado.
 - Animaciones / mejoras UI
+
+---
+
+## 🤝 Contribuir
+
+### Las contribuciones son bienvenidas 💛
+
+### 1) Haz un fork
+
+### 2) Crea tu rama
+```bash
+git checkout -b feature/nueva-feature
+```
+
+### 3) Commit
+```bash
+git commit -m "Añade nueva feature"
+```
+
+### 4) Push
+```bash
+git push origin feature/nueva-feature
+```
+
+### 5) Abre una Pull Request
+
+---
+
+## 📄 Licencia
+
+Este proyecto está bajo licencia **MIT**.
+Consulta el archivo [**LICENSE**](LICENSE)
+.
+
+---
+
+## 🧾 Créditos
+
+- Datos pokémon: PokeAPI.
+- Pokémon y nombres relacionados pertenecen a **Nintendo** / **Game Freak** / **Creatures**.
+- Backend: **Firebase** (Google).
