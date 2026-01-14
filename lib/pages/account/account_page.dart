@@ -12,6 +12,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:provider/provider.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+import 'package:toastification/toastification.dart';
 
 class AccountPage extends StatefulWidget {
   const AccountPage({super.key});
@@ -39,6 +40,143 @@ class _AccountPageState extends State<AccountPage> {
       // Si quieres también buildNumber:
       _appVersion = "${info.version} (${info.buildNumber})";
     });
+  }
+
+  void _showDeleteAccountSheet(
+    BuildContext context,
+    AuthController authController,
+  ) {
+    final isDark = context.read<ThemeProvider>().isDark;
+
+    showModalBottomSheet(
+      context: context,
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
+      ),
+      builder: (ctx) {
+        return Container(
+          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+          decoration: BoxDecoration(
+            color: isDark ? const Color(0xFF1F1F1F) : Colors.white,
+            borderRadius: const BorderRadius.vertical(top: Radius.circular(20)),
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Container(
+                width: 40,
+                height: 4,
+                margin: const EdgeInsets.only(bottom: 24),
+                decoration: BoxDecoration(
+                  color: Colors.grey[400],
+                  borderRadius: BorderRadius.circular(2),
+                ),
+              ),
+
+              Text(
+                "¿Eliminar cuenta?",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w700,
+                  color: AppColors.colorTexto(context),
+                ),
+              ),
+              const SizedBox(height: 12),
+
+              Text(
+                "Esta acción es permanente y eliminará tu cuenta y datos asociados.",
+                textAlign: TextAlign.center,
+                style: GoogleFonts.poppins(
+                  fontSize: 14,
+                  color: AppColors.colorTexto(context),
+                ),
+              ),
+              const SizedBox(height: 24),
+
+              SizedBox(
+                width: double.infinity,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    try {
+                      await authController.deleteAccount();
+                      Navigator.of(ctx).pop();
+                      toastification.show(
+                        title: Text("Cuenta eliminada"),
+                        description: Text(
+                          "Tu cuenta se ha eliminado correctamente",
+                        ),
+                        type: ToastificationType.success,
+                        style: ToastificationStyle.flatColored,
+                        autoCloseDuration: Duration(seconds: 3),
+                        showProgressBar: true,
+                      );
+                    } catch (e) {
+                      Navigator.of(ctx).pop();
+
+                      if (e.toString().contains("requires-recent-login")) {
+                        toastification.show(
+                          title: Text("Inicio de sesión requerido"),
+                          description: Text(
+                            "Por seguridad, inicia sesión de nuevo y vuelve a intentarlo",
+                          ),
+                          type: ToastificationType.info,
+                          style: ToastificationStyle.flatColored,
+                          autoCloseDuration: Duration(seconds: 4),
+                          showProgressBar: true,
+                        );
+
+                        // ✅ opcional recomendado
+                        await authController.logout();
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            content: Text("No se pudo eliminar la cuenta"),
+                          ),
+                        );
+                      }
+                    }
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFCD3131),
+                    padding: const EdgeInsets.symmetric(vertical: 16),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100),
+                    ),
+                  ),
+                  child: Text(
+                    "Sí, eliminar",
+                    style: GoogleFonts.poppins(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
+              GestureDetector(
+                onTap: () => Navigator.of(ctx).pop(),
+                child: Text(
+                  "No, cancelar",
+                  style: GoogleFonts.poppins(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                    color: AppColors.colorTexto(context),
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 16),
+            ],
+          ),
+        );
+      },
+    );
   }
 
   @override
@@ -574,6 +712,32 @@ class _AccountPageState extends State<AccountPage> {
                       subtitle: Text(
                         //"Estás conectado como ${authController.user?.name ?? ''}",
                         "${AppStrings.textoEstasConectadoComo}${authController.user?.name ?? ''}",
+                        style: GoogleFonts.poppins(
+                          fontSize: 14,
+                          fontWeight: FontWeight.normal,
+                          color: AppColors.colorTexto(context),
+                        ),
+                      ),
+                    ),
+                    ListTile(
+                      leading: const Icon(
+                        Icons.delete_outline,
+                        size: 24,
+                        color: Color(0xFFCD3131),
+                      ),
+                      onTap: () =>
+                          _showDeleteAccountSheet(context, authController),
+                      contentPadding: EdgeInsets.zero,
+                      title: Text(
+                        "Eliminar cuenta",
+                        style: GoogleFonts.poppins(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: const Color(0xFFCD3131),
+                        ),
+                      ),
+                      subtitle: Text(
+                        "Elimina permanentemente tu cuenta y tus datos",
                         style: GoogleFonts.poppins(
                           fontSize: 14,
                           fontWeight: FontWeight.normal,
