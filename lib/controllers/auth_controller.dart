@@ -1,6 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dexhub/controllers/favorites_controller.dart';
 import 'package:dexhub/models/user_model.dart';
 import 'package:dexhub/services/auth_service.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
 class AuthController with ChangeNotifier {
@@ -79,6 +81,36 @@ class AuthController with ChangeNotifier {
       return true;
     } catch (_) {
       return false;
+    }
+  }
+
+  Future<void> deleteAccount() async {
+    final currentUser = FirebaseAuth.instance.currentUser;
+    if (currentUser == null) return;
+
+    try {
+      // ✅ 1) BORRAR CUENTA AUTH PRIMERO
+      await currentUser.delete();
+
+      // ✅ 2) luego borrar Firestore (ya no hace falta login)
+      await FirebaseFirestore.instance
+          .collection("users")
+          .doc(currentUser.uid)
+          .delete();
+
+      // ✅ opcional: borrar favoritos si los guardas
+      await FirebaseFirestore.instance
+          .collection("favorites")
+          .doc(currentUser.uid)
+          .delete();
+
+      user = null;
+      notifyListeners();
+    } on FirebaseAuthException catch (e) {
+      if (e.code == "requires-recent-login") {
+        throw Exception("requires-recent-login");
+      }
+      rethrow;
     }
   }
 }
