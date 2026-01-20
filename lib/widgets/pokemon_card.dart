@@ -1,6 +1,6 @@
 import 'package:dexhub/controllers/favorites_controller.dart';
 import 'package:dexhub/models/pokemon_model.dart';
-import 'package:dexhub/pages/pokemon_details.dart';
+import 'package:dexhub/pages/pokemon_details_page.dart';
 import 'package:dexhub/utils/pokemon/pokemon_card_background_colors.dart';
 import 'package:dexhub/utils/pokemon/pokemon_type_colors.dart';
 import 'package:dexhub/utils/pokemon/pokemon_type_images.dart';
