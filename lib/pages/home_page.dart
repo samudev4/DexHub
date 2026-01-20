@@ -2,8 +2,8 @@
 
 import 'package:dexhub/constants/app_colors.dart';
 import 'package:dexhub/constants/strings/app_strings.dart';
-import 'package:dexhub/pages/account/account_page.dart';
-import 'package:dexhub/pages/favorites_page.dart';
+import 'package:dexhub/pages/auth/account_gate.dart';
+import 'package:dexhub/pages/auth/favorites_gate.dart';
 import 'package:dexhub/pages/pokedex_page.dart';
 import 'package:dexhub/pages/region_page.dart';
 import 'package:flutter/material.dart';
@@ -23,8 +23,8 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _pages = const [
     PokedexPage(),
     RegionPage(),
-    FavoritesPage(),
-    AccountPage(),
+    FavoritesGate(),
+    AccountGate(),
   ];
 
   final List<Map<String, String>> _icons = [

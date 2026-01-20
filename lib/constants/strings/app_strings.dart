@@ -116,6 +116,7 @@ class AppStrings {
   static const String textoNoHaceDanoA = "No hace daño a";
   static const String textoEsInmuneA = "Es inmune a";
   static const String textoEvoluciones = "Evoluciones";
+  static const String textoContinuar = "Evoluciones";
 
   // RUTAS:
 

@@ -22,23 +22,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        /// 🔴 FAVORITOS (vive siempre)
         ChangeNotifierProvider(create: (_) => FavoritesController()),
 
-        /// 🔐 AUTH (depende de favoritos)
         ChangeNotifierProxyProvider<FavoritesController, AuthController>(
           create: (context) =>
               AuthController(context.read<FavoritesController>()),
           update: (_, favoritesController, authController) => authController!,
         ),
 
-        ChangeNotifierProvider(create: (_) => ThemeProvider(), child: MyApp()),
+        /// ✅ CORREGIDO: nada de child: MyApp()
+        ChangeNotifierProvider(create: (_) => ThemeProvider()),
       ],
       child: ToastificationWrapper(
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           title: AppStrings.textoNombreApp,
-          initialRoute: AppRoutes.authWrapper,
+
+          /// ✅ Apple: entrar SIEMPRE al home sin login
+          initialRoute: AppRoutes.initialRoute,
           routes: AppRoutes.routes,
         ),
       ),

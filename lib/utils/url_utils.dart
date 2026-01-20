@@ -21,7 +21,7 @@ class UrlUtils {
 
   // --- GITHUB LINKS ---
   static Future<void> openGitHubProfile(String username) {
-    return openUrl("${AppStrings.githubUrl}$username");
+    return openUrl("https://www.github.com/$username");
   }
 
   static Future<void> openGitHubRepo(String username, String repo) {
